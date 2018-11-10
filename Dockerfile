@@ -3,7 +3,9 @@ MAINTAINER miiro@getintodevops.com
 USER root
 
 # Install the latest Docker CE binaries
-RUN apt-get update && \
+# mirror replaced # xkx
+RUN sed -i 's/deb.debian.org/ftp.cn.debian.org/g' /etc/apt/sources.list && \
+    apt-get update && \
     apt-get -y install apt-transport-https \
       ca-certificates \
       curl \
