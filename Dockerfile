@@ -4,6 +4,7 @@ USER root
 
 # Install the latest Docker CE binaries
 # mirror replaced # xkx
+# add jenkins user to docker's group
 RUN sed -i 's/deb.debian.org/ftp.cn.debian.org/g' /etc/apt/sources.list && \
     apt-get update && \
     apt-get -y install apt-transport-https \
@@ -17,5 +18,6 @@ RUN sed -i 's/deb.debian.org/ftp.cn.debian.org/g' /etc/apt/sources.list && \
       $(lsb_release -cs) \
       stable" && \
    apt-get update && \
-   apt-get -y install docker-ce
+   apt-get -y install docker-ce && \
+   gpasswd -a jenkins docker
 
