@@ -19,5 +19,6 @@ RUN sed -i 's/deb.debian.org/ftp.cn.debian.org/g' /etc/apt/sources.list && \
       stable" && \
    apt-get update && \
    apt-get -y install docker-ce && \
-   gpasswd -a jenkins docker
+   gpasswd -a jenkins docker && \
+   newgrp - docker
 
