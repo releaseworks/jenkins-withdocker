@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.138
+FROM jenkins/jenkins:2.155
 MAINTAINER xkx.zju@gmail.com
 USER root
 
