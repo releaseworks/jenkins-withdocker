@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:latest
+FROM jenkins/jenkins:lts
 MAINTAINER xkx.zju@gmail.com
 USER root
 
