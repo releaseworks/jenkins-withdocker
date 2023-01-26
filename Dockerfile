@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:lts-jdk11
 MAINTAINER miiro@getintodevops.com
 USER root
 
@@ -15,5 +15,5 @@ RUN apt-get update && \
       $(lsb_release -cs) \
       stable" && \
    apt-get update && \
-   apt-get -y install docker-ce
+   apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose docker-compose-plugin
 
