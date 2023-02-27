@@ -1,5 +1,5 @@
 FROM jenkins/jenkins:lts
-MAINTAINER miiro@getintodevops.com
+LABEL MAINTAINER="miiro@getintodevops.com"
 USER root
 
 # Install the latest Docker CE binaries
